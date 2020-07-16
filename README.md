@@ -10,7 +10,7 @@ Published at ACM SIGKDD 2020.
 To see for yourself how fast PPRGo runs even on a large dataset we've set up a [Google Colab notebook](https://colab.research.google.com/drive/1nw3MIpXPK_n6IZvKcLxkOuOi9_1i6IzA?usp=sharing), which trains and generates predictions for the Reddit dataset, as described in the paper.
 
 ## Installation
-You can install the repository using `pip install -e .`.
+You can install the repository using `pip install -e .`. Since CUDA 10.0 includes a bug that affects PPRGo we strongly recommend using e.g. 10.1.
 
 ## Run the code
 This repository contains a demo notebook for running training and inference (`demo.ipynb`) and a script for running the model on a cluster with [SEML](https://github.com/TUM-DAML/seml) (`run_seml.py`).

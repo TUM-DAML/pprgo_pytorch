@@ -1,7 +1,5 @@
 from setuptools import setup
 
-# Since CUDA 10.0 includes a bug that affects PPRGo we strongly recommend using e.g. 10.1,
-# which can be installed using environment.yaml (e.g. via `conda env create -f environment.yaml`).
 install_requires = [
         "numpy",
         "scipy>=1.3",
