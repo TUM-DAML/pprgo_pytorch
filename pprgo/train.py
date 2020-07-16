@@ -39,7 +39,7 @@ def train(model, train_set, val_set, lr, weight_decay,
     train_loader = torch.utils.data.DataLoader(
             dataset=train_set,
             sampler=torch.utils.data.BatchSampler(
-                torch.utils.data.RandomSampler(train_set),
+                torch.utils.data.SequentialSampler(train_set),
                 batch_size=batch_size, drop_last=False
             ),
             batch_size=None,
