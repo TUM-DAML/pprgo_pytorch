@@ -138,9 +138,9 @@ def run(data_dir, data_fname, split_seed, ntrain_div_classes, attr_normalization
     logging.info('Inference done.')
 
     results = {
-            'accuracy_train': accuracy_score(labels[train_idx], predictions[train_idx]),
-            'accuracy_val': accuracy_score(labels[val_idx], predictions[val_idx]),
-            'accuracy_test': accuracy_score(labels[test_idx], predictions[test_idx]),
+            'accuracy_train': 100 * accuracy_score(labels[train_idx], predictions[train_idx]),
+            'accuracy_val': 100 * accuracy_score(labels[val_idx], predictions[val_idx]),
+            'accuracy_test': 100 * accuracy_score(labels[test_idx], predictions[test_idx]),
             'f1_train': f1_score(labels[train_idx], predictions[train_idx], average='macro'),
             'f1_val': f1_score(labels[val_idx], predictions[val_idx], average='macro'),
             'f1_test': f1_score(labels[test_idx], predictions[test_idx], average='macro'),
