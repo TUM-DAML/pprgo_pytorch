@@ -16,7 +16,7 @@ install_requires = [
 setup(
         name='pprgo_pytorch',
         version='1.0',
-        description='PPRGo model, from "Scaling Graph Neural Networks with Approximate PageRank"',
+        description='PPRGo model in PyTorch, from "Scaling Graph Neural Networks with Approximate PageRank"',
         author='Aleksandar Bojchevski, Johannes Klicpera, Bryan Perozzi, Amol Kapoor, Martin Blais, Benedek Rózemberczki, Michal Lukasik, Stephan Günnemann',
         author_email='a.bojchevski@in.tum.de, klicpera@in.tum.de',
         packages=['pprgo'],

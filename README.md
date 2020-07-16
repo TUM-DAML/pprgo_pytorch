@@ -1,6 +1,6 @@
 # PPRGo
 
-This repository provides an implementation of PPRGo for a single machine in PyTorch. For the original TensorFlow 1 implementation see [this repository](https://github.com/TUM-DAML/pprgo). PPRGo is a fast GNN able to scale to massive graphs in both single-machine and distributed setups. It was proposed in our paper
+This repository provides an implementation of PPRGo for a single machine in PyTorch. For the [original TensorFlow 1 implementation see this repository](https://github.com/TUM-DAML/pprgo). PPRGo is a fast GNN able to scale to massive graphs in both single-machine and distributed setups. It was proposed in our paper
 
 **[Scaling Graph Neural Networks with Approximate PageRank](https://www.daml.in.tum.de/pprgo)**   
 by Aleksandar Bojchevski*, Johannes Klicpera*, Bryan Perozzi, Amol Kapoor, Martin Blais, Benedek Rózemberczki, Michal Lukasik, Stephan Günnemann 
