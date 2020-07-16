@@ -1,4 +1,4 @@
-# PPRGo
+# PPRGo (PyTorch)
 
 This repository provides a PyTorch implementation of PPRGo for a single machine. You can find the [original TensorFlow 1 implementation in another repository](https://github.com/TUM-DAML/pprgo). PPRGo is a fast GNN able to scale to massive graphs in both single-machine and distributed setups. It was proposed in our paper
 
