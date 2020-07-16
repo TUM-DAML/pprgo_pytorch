@@ -7,7 +7,7 @@ by Aleksandar Bojchevski*, Johannes Klicpera*, Bryan Perozzi, Amol Kapoor, Marti
 Published at ACM SIGKDD 2020.
 
 ## Demonstration
-To see for yourself how fast PPRGo runs even on a large dataset we've set up a [Google Colab notebook](???), which trains and generates predictions for the Reddit dataset, as described in the paper.
+To see for yourself how fast PPRGo runs even on a large dataset we've set up a [Google Colab notebook](https://colab.research.google.com/drive/1nw3MIpXPK_n6IZvKcLxkOuOi9_1i6IzA?usp=sharing), which trains and generates predictions for the Reddit dataset, as described in the paper.
 
 ## Installation
 You can install the repository using `pip install -e .`.
