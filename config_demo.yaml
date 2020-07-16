@@ -1,0 +1,28 @@
+data_file: data/reddit.npz  # Path to the .npz data file
+split_seed: 0               # Seed for splitting the dataset into train/val/test
+ntrain_div_classes: 20      # Number of training nodes divided by number of classes
+attr_normalization: None    # Attribute normalization. Not used in the paper
+
+alpha: 0.5                  # PPR teleport probability
+eps: 1e-4                   # Stopping threshold for ACL's ApproximatePR
+topk: 32                    # Number of PPR neighbors for each node
+ppr_normalization: 'sym'    # Adjacency matrix normalization for weighting neighbors
+
+hidden_size: 32             # Size of the MLP's hidden layer
+nlayers: 2                  # Number of MLP layers
+weight_decay: 1e-4          # Weight decay used for training the MLP
+dropout: 0.1                # Dropout used for training
+
+lr: 5e-3                    # Learning rate
+max_epochs: 200             # Maximum number of epochs (exact number if no early stopping)
+batch_size: 512             # Batch size for training
+batch_mult_val: 4           # Multiplier for validation batch size
+
+eval_step: 20               # Accuracy is evaluated after every this number of steps
+run_val: False              # Evaluate accuracy on validation set during training
+
+early_stop: False           # Use early stopping
+patience: 50                # Patience for early stopping
+
+nprop_inference: 2          # Number of propagation steps during inference
+inf_fraction: 1.0           # Fraction of nodes for which local predictions are computed during inference

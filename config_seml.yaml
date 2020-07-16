@@ -1,0 +1,62 @@
+seml:
+  name: pprgo
+  executable: run_seml.py
+  output_dir: '~/slurm_out'
+  project_root_dir: .
+
+slurm:
+  experiments_per_job: 1
+  sbatch_options:
+    gres: 'gpu:"GeForce GTX 1080 Ti":1'
+    mem: 32G                  # Main memory
+    cpus-per-task: 5          # CPU cores
+    time: 1-00:00             # Maximum runtime, D-HH:MM
+    partition: [gpu_all]
+
+fixed:
+  data_dir: /nfs/shared/data/ # Directory containing .npz data files
+  ntrain_div_classes: 20      # Number of training nodes divided by number of classes
+  attr_normalization: None    # Attribute normalization. Not used in the paper
+  topk: 32                    # Number of PPR neighbors for each node
+  ppr_normalization: 'sym'    # Adjacency matrix normalization for weighting neighbors
+  hidden_size: 32             # Size of the MLP's hidden layer
+  nlayers: 2                  # Number of MLP layers
+  weight_decay: 1e-4          # Weight decay used for training the MLP
+  dropout: 0.1                # Dropout used for training
+  lr: 5e-3                    # Learning rate
+  max_epochs: 200             # Maximum number of epochs (exact number if no early stopping)
+  batch_size: 512             # Batch size for training
+  batch_mult_val: 4           # Multiplier for validation batch size
+  eval_step: 1                # Accuracy is evaluated after every this number of steps
+  run_val: False              # Evaluate accuracy on validation set during training
+  early_stop: False           # Use early stopping
+  patience: 50                # Patience for early stopping
+  nprop_inference: 2          # Number of propagation steps during inference
+  inf_fraction: 1.0           # Fraction of nodes for which local predictions are computed during inference
+
+grid:
+  split_seed:                 # Seed for splitting the dataset into train/val/test
+    type: 'range'
+    min: 0
+    max: 5
+    step: 1
+  eps:                        # Stopping threshold for ACL's ApproximatePR
+    type: choice
+    options: [1e-2, 1e-4]
+
+reddit:
+  fixed:
+    alpha: 0.5                # PPR teleport probability
+    data_fname: 'reddit.npz'  # Name of .npz data file
+
+remaining:
+  fixed:
+    alpha: 0.25               # PPR teleport probability
+  grid:
+    data_fname:               # Name of .npz data file
+      type: choice
+      options:
+        - 'cora_full.npz'
+        - 'pubmed.npz'
+        - 'mag_large_filtered_06_09_coarse_standardized.npz'
+        # - 'mag_large_filtered_06_09_fine_standardized.npz'

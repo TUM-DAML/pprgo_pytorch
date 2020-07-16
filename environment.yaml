@@ -1,0 +1,18 @@
+name: pprgo
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - cudatoolkit=10.1.243=h6bb024c_0
+  - cudnn=7.6.5=cuda10.1_0
+  - cupti=10.1.168=0
+  - numba=0.49.0=py36h0573a6f_0
+  - numpy-base=1.18.1=py36hde5b4d6_1
+  - python=3.6.10=hcf32534_1
+  - scikit-learn=0.22.1=py36hd81dba3_0
+  - scipy=1.4.1=py36h0b6359f_0
+  - tensorflow=1.14.0=gpu_py36h3fb9ad6_0
+  - tensorflow-base=1.14.0=gpu_py36he45bfe2_0
+  - tensorflow-estimator=1.14.0=py_0
+  - tensorflow-gpu=1.14.0=h0d30ee6_0
