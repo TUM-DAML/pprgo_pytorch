@@ -4,7 +4,7 @@ install_requires = [
         "numpy",
         "scipy>=1.3",
         "numba>=0.49",
-        "pytorch",
+        "torch",
         "torch-scatter",
         "torch-sparse",
         "scikit-learn",
