@@ -82,7 +82,7 @@ def train(model, train_set, val_set, lr, weight_decay,
 
                 if val_set is not None:
                     # update val stats
-                    rnd_idx = np.random.choice(len(val_set))[:batch_mult_val * batch_size]
+                    rnd_idx = np.random.choice(len(val_set), size=batch_mult_val * batch_size, replace=False)
                     xbs, yb = val_set[rnd_idx]
                     xbs, yb = [xb.to(device) for xb in xbs], yb.to(device)
                     val_loss, val_ncorr = run_batch(model, xbs, yb, None, train=False)
