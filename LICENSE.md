@@ -1,4 +1,4 @@
-PPRGo Copyright 2020 Aleksandar Bojchevski, Johannes Klicpera (“Licensor”)
+PPRGo Copyright 2020 Aleksandar Bojchevski, Johannes Gasteiger (“Licensor”)
 
 Hippocratic License Version Number: 2.1.
 
